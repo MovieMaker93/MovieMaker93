@@ -6,8 +6,7 @@ More about me? ℹ️
 - Aws developer associate certified
 - Spent 2 years as full stack developer, now transitioning to DevOps
 - View my [Portfolio](https://blogfolio.org/)
-- View my [Blog](https://blogfolio.org/posts)
-- Check my hugo site [repository](https://github.com/MovieMaker93/portfolio-alfonso) hosted in my home raspberry cluster.
+- Check how to create arm64 hugo image for your local raspberry cluster [ARM](https://github.com/MovieMaker93/hugo-arm-site).
 - 👯 I’m looking to collaborate on some cools open source projects
 - 💬 Ask me about all devops stuffs
 - Fun fact: I love 3d printing, but actually I have never done a good print yet :disappointed_relieved:
