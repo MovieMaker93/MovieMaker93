@@ -4,7 +4,7 @@ More about me? ℹ️
 
 - Fullstack developer at Accenture
 - Aws developer associate certified
-- Spent two years as full stack developer, now transitioning to DevOps
+- Spent two years as full stack developer, now transitioning to Cloud Engineer
 - Feel free to check out my [Portfolio](https://blogfolio.org/)
 - Check how to create an arm64 Hugo image for your local raspberry cluster [ARM](https://github.com/MovieMaker93/hugo-arm-site).
 - 👯 I’m looking to collaborate on some cools open source projects
