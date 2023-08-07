@@ -12,5 +12,5 @@ More about me? ℹ️
 
 # Next projects
 
-- Try to make my learning certification journey public.
-- New blog site with Hugo, helm versioning and ArgoCD
+- Leetcode repository with solutions
+- New blog site with Hugo hosted on s3 (Iac with python CDK)
