@@ -14,3 +14,4 @@ More about me? ℹ️
 
 - Leetcode repository with solutions
 - New blog site with Hugo hosted on s3 (Iac with python CDK)
+- POC kubernates operator with kubebuilder
