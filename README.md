@@ -1,6 +1,6 @@
 ### Hi all 👋
 ## Welcome to my GitHub :dog: (Yes, I love dogs!!) 
-More about me? ℹ️
+More about me? 
 
 - Cloud Native Engineer at Kiratech
 - Aws developer associate certified
