@@ -4,14 +4,13 @@ More about me? ℹ️
 
 - Cloud Native Engineer at Kiratech
 - Aws developer associate certified
-- Feel free to check out my [Portfolio](https://blogfolio.org/)
+- Feel free to check out my [Blog](https://blog.alfor.dev/)
 - Check how to create an arm64 Hugo image for your local raspberry cluster [ARM](https://github.com/MovieMaker93/hugo-arm-site).
-- 👯 I’m looking to collaborate on some cools open source projects
 - 💬 Ask me about all DevOps stuff
-- Fun fact: I love 3d printing
+- Love 3d printing and keyboard modding.
 
 # Next projects
 
 - Leetcode repository with solutions
-- New blog site with Hugo hosted on s3 (Iac with python CDK)
+- New blog
 - POC kubernates operator with kubebuilder
