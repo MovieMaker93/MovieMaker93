@@ -3,7 +3,7 @@
 More about me? 
 
 - Cloud Native Engineer at Kiratech
-- Aws developer associate certified
+- Kubernetes expert
 - :mag: Feel free to check out my [Blog](https://blog.alfor.dev/)
 - Check how to create an arm64 Hugo image for your local raspberry cluster [ARM](https://github.com/MovieMaker93/hugo-arm-site).
 - 💬 Ask me about all DevOps stuff
