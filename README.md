@@ -11,11 +11,11 @@ More about me?
 
 ## My toolkit 🧰:
 
-Kubernetes, Nomad
-Jenkins, Gitlab, GitHub
-Terraform, ArgoCD, FluxCD, AWS CDK
-AWS, Azure
-Java, Python, Go, Bash
+- Kubernetes, Nomad
+- Jenkins, Gitlab, GitHub, Cloudbees CI, Bitbucket
+- Terraform, ArgoCD, FluxCD, AWS CDK
+- AWS, Azure
+- Java, Python, Go, Bash
 
 ## Next projects
 
