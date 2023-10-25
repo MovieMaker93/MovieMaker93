@@ -11,6 +11,5 @@ More about me?
 
 # Next projects
 
-- Leetcode repository with solutions
-- POC amazon bedrock
-- POC Kubernetes operator with Kubebuilder
+- POC on new cutting-edge tecnologies
+- Training course on Kubernetes
