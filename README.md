@@ -20,5 +20,4 @@ More about me?
 ## Next projects
 
 - POC on new cutting-edge tecnologies
-- Training course on Kubernetes
 - Learning Rust
