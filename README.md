@@ -9,7 +9,16 @@ More about me?
 - 💬 Ask me about all DevOps stuff
 - :computer: Love 3d printing and keyboard modding.
 
-# Next projects
+## My toolkit 🧰:
+
+Kubernetes, Nomad
+Jenkins, Gitlab, GitHub
+Terraform, ArgoCD, FluxCD, AWS CDK
+AWS, Azure
+Java, Python, Go, Bash
+
+## Next projects
 
 - POC on new cutting-edge tecnologies
 - Training course on Kubernetes
+- Learning Rust
