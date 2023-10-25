@@ -11,7 +11,7 @@ More about me?
 
 ## My toolkit 🧰:
 
-- Kubernetes, Nomad
+- Kubernetes, Nomad, Crossplane, OperatorSDK, Kubebuilder
 - Jenkins, Gitlab, GitHub, Cloudbees CI, Bitbucket
 - Terraform, ArgoCD, FluxCD, AWS CDK
 - AWS, Azure
