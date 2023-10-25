@@ -12,5 +12,5 @@ More about me?
 # Next projects
 
 - Leetcode repository with solutions
-- New Blog
+- POC amazon bedrock
 - POC Kubernetes operator with Kubebuilder
