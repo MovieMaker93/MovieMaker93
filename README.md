@@ -15,9 +15,4 @@ More about me?
 - Jenkins, Gitlab, GitHub, Cloudbees CI, Bitbucket
 - Terraform, ArgoCD, FluxCD, AWS CDK
 - AWS, Azure
-- Java, Python, Go, Bash
-
-## Next projects
-
-- POC on new cutting-edge tecnologies
-- Learning Rust
+- Java, Python, Go, Bash, Rust
