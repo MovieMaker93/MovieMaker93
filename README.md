@@ -83,7 +83,7 @@ More about me?
 -->
 [![MovieMaker93’s github stats](https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=dark&hide=stars,contribs)](https://github.com/MovieMaker93)
 <br/>
-[![GitHub Streak](https://streak-stats.demolab.com?user=MovieMaker93&theme=dark&background=000000)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=MovieMaker93&theme=dark&background=000000)](https://github.com/MovieMaker93)
 <br/>
 [![MovieMaker93’s Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MovieMaker93&layout=compact&theme=vision-friendly-dark)](https://github.com/MovieMaker93)
 
