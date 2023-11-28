@@ -2,10 +2,10 @@
 ## Welcome to my GitHub :dog: (Yes, I love dogs!!) 
 More about me? 
 
-- Cloud Native Engineer at Kiratech
-- Kubernetes and AWS certified
-- :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
-- 💬 Open Source Contributor
+- **Cloud Native Engineer**
+- ☁️ ☸ **Kubernetes and AWS certified**
+- 💬 **Open Source Contributor**
+- - :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
 - :computer: Love 3d printing and keyboard modding.
 
 ## My toolkit 🧰:
