@@ -50,6 +50,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
+1. ❗ Opened issue [#17](https://github.com/krateoplatformops/krateo/issues/17) in [krateoplatformops/krateo](https://github.com/krateoplatformops/krateo)
+2. ❗ Opened issue [#2](https://github.com/krateoplatformops/deployment-service/issues/2) in [krateoplatformops/deployment-service](https://github.com/krateoplatformops/deployment-service)
+3. 🗣 Commented on [#16](https://github.com/krateoplatformops/krateo/issues/16#issuecomment-1755459495) in [krateoplatformops/krateo](https://github.com/krateoplatformops/krateo)
+4. ❗ Opened issue [#16](https://github.com/krateoplatformops/krateo/issues/16) in [krateoplatformops/krateo](https://github.com/krateoplatformops/krateo)
 <!--END_SECTION:activity-->
 
 <br/>
