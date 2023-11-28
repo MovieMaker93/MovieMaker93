@@ -12,6 +12,21 @@ More about me?
 <br/>
 
  ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
+ 
+## 💁 Socials
+<div id="badges">
+  <a href="https://www.linkedin.com/in/alfonso-fortunato-a37056b9/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  </div>
+
+
+  <a href="https://twitter.com/devopsfortunato">
+  <img src="https://img.shields.io/twitter/url?style=for-the-badge&logoColor=white" alt="Twitter Badge"/>
+</a>
+  
+<br/>
+<br/>
 
 <br/>
 
