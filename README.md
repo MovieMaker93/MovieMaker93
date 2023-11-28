@@ -5,7 +5,7 @@ More about me?
 - **Cloud Native Engineer**
 - ☁️ ☸ **Kubernetes and AWS certified**
 - 💬 **Open Source Contributor**
-- - :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
+- :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
 - :computer: Love 3d printing and keyboard modding.
 
 ## My toolkit 🧰:
