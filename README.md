@@ -10,7 +10,8 @@ More about me?
 
 <br/>
 <br/>
-![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
+
+ ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
 
 <br/>
 
