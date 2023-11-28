@@ -8,6 +8,10 @@ More about me?
 - :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
 - :computer: Love 3d printing and keyboard modding.
 
+![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
+
+<br/>
+
 ## My toolkit 🧰:
 
 - Kubernetes, Nomad, Crossplane, OperatorSDK, Kubebuilder
