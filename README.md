@@ -20,10 +20,7 @@ More about me?
   </a>
   </div>
 
-
-  <a href="https://twitter.com/devopsfortunato">
-  <img src="https://img.shields.io/twitter/url" alt="Twitter Badge"/>
-</a>
+  ![https://twitter.com/devopsfortunato](https://img.shields.io/twitter/url)
   
 <br/>
 <br/>
