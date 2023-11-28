@@ -8,6 +8,8 @@ More about me?
 - :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
 - :computer: Love 3d printing and keyboard modding.
 
+<br/>
+<br/>
 ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
 
 <br/>
