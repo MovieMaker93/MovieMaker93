@@ -22,7 +22,7 @@ More about me?
 
 
   <a href="https://twitter.com/devopsfortunato">
-  <img src="https://img.shields.io/twitter/url?style=for-the-badge&logoColor=white" alt="Twitter Badge"/>
+  <img src="https://img.shields.io/twitter/url" alt="Twitter Badge"/>
 </a>
   
 <br/>
