@@ -20,9 +20,10 @@ More about me?
   </a>
   </div>
 
-  ![https://twitter.com/devopsfortunato](https://img.shields.io/twitter/url)
+<a href="https://medium.com/@alfor93">
+  <img src="image/medium.png" alt="Medium Badge" style="width: 111px; height: 50px;"/>
+</a>
   
-<br/>
 <br/>
 
 <br/>
@@ -34,3 +35,21 @@ More about me?
 - Terraform, ArgoCD, FluxCD, AWS CDK
 - AWS, Azure
 - Java, Python, Go, Bash, Rust
+
+## 📈 Stats 📉 
+<!--
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=R3DRUN3&layout=compact)](https://github.com/yushi1007)
+-->
+
+![R3DRUN3's GitHub stats](https://github-readme-stats.vercel.app/api?username=R3DRUn3&show_icons=true&theme=dark)
+<br/>
+[![R3DRUN3's GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=R3DRUN3&theme=dark&background=000000)](https://git.io/streak-stats)
+<br/>
+[![R3DRUN3's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=R3DRUN3&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+
+## Recent Activities on GitHub
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
+<br/>
