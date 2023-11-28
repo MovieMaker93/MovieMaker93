@@ -21,7 +21,7 @@ More about me?
   </div>
 
 <a href="https://medium.com/@alfor93">
-  <img src="image/medium.png" alt="Medium Badge" style="width: 111px; height: 50px;"/>
+  <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium Badge"/>
 </a>
   
 <br/>
@@ -40,12 +40,9 @@ More about me?
 <!--
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=R3DRUN3&layout=compact)](https://github.com/yushi1007)
 -->
+[![MovieMaker93’s github stats](https://github-readme-stats.vercel.app/api?username=MovieMaker93)](https://github.com/MovieMaker93)
 
-![R3DRUN3's GitHub stats](https://github-readme-stats.vercel.app/api?username=R3DRUn3&show_icons=true&theme=dark)
-<br/>
-[![R3DRUN3's GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=R3DRUN3&theme=dark&background=000000)](https://git.io/streak-stats)
-<br/>
-[![R3DRUN3's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=R3DRUN3&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+[![MovieMaker93’s Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MovieMaker93&layout=compact)](https://github.com/MovieMaker93)
 
 ## Recent Activities on GitHub
 
