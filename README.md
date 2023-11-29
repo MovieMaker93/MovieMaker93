@@ -38,7 +38,7 @@ More about me?
 ![](https://img.shields.io/badge/Code-javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
 ![](https://img.shields.io/badge/Code-Rust-informational?style=flat&logo=rust&color=C13618)
 <br/>
-![](https://img.shields.io/badge/Tool-shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
+![](https://img.shields.io/badge/Code-shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 ![](https://img.shields.io/badge/Code-python-informational?style=flat&logo=python&color=006bb3)
 ![](https://img.shields.io/badge/Code-Apache%20Groovy-4298B8.svg?style=flate&logo=Apache+Groovy&logoColor=white)
 <br/>
