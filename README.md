@@ -90,10 +90,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-1863160458) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-2. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-1861375144) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-3. ❗ Opened issue [#17](https://github.com/krateoplatformops/krateo/issues/17) in [krateoplatformops/krateo](https://github.com/krateoplatformops/krateo)
-4. ❗ Opened issue [#2](https://github.com/krateoplatformops/deployment-service/issues/2) in [krateoplatformops/deployment-service](https://github.com/krateoplatformops/deployment-service)
+1. 🗣 Commented on [#2397](https://github.com/nvim-treesitter/nvim-treesitter/issues/2397#issuecomment-1863495748) in [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+2. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-1863160458) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+3. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-1861375144) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+4. ❗ Opened issue [#17](https://github.com/krateoplatformops/krateo/issues/17) in [krateoplatformops/krateo](https://github.com/krateoplatformops/krateo)
 <!--END_SECTION:activity-->
 
 <br/>
