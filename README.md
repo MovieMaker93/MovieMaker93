@@ -90,10 +90,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-2101399178) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-2. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2099390174) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-3. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2096829576) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-4. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2096557677) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+1. 🗣 Commented on [#12961](https://github.com/helm/helm/issues/12961#issuecomment-2103066373) in [helm/helm](https://github.com/helm/helm)
+2. 🗣 Commented on [#2803](https://github.com/nvim-telescope/telescope.nvim/issues/2803#issuecomment-2101399178) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+3. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2099390174) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+4. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2096829576) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 <!--END_SECTION:activity-->
 
 <br/>
