@@ -90,10 +90,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#3097](https://github.com/nvim-telescope/telescope.nvim/pull/3097#issuecomment-2110717605) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-2. 💪 Opened PR [#3097](https://github.com/nvim-telescope/telescope.nvim/pull/3097) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-3. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2106213987) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-4. 🗣 Commented on [#12961](https://github.com/helm/helm/issues/12961#issuecomment-2103066373) in [helm/helm](https://github.com/helm/helm)
+1. 💪 Opened PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+2. 🗣 Commented on [#3097](https://github.com/nvim-telescope/telescope.nvim/pull/3097#issuecomment-2110717605) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+3. 💪 Opened PR [#3097](https://github.com/nvim-telescope/telescope.nvim/pull/3097) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+4. 🗣 Commented on [#2966](https://github.com/nvim-telescope/telescope.nvim/issues/2966#issuecomment-2106213987) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 <!--END_SECTION:activity-->
 
 <br/>
