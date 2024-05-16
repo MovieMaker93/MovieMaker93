@@ -90,10 +90,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#1224](https://github.com/kubernetes-sigs/contributor-playground/pull/1224) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
-2. ❌ Reopened PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
-3. ❌ Closed PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
-4. 💪 Opened PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+1. ❌ Closed PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+2. 💪 Opened PR [#1224](https://github.com/kubernetes-sigs/contributor-playground/pull/1224) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+3. ❌ Reopened PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+4. ❌ Closed PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
 <!--END_SECTION:activity-->
 
 <br/>
