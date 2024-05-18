@@ -90,10 +90,10 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#2777](https://github.com/nvim-telescope/telescope.nvim/issues/2777#issuecomment-2116884345) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-2. ❌ Closed PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
-3. 💪 Opened PR [#1224](https://github.com/kubernetes-sigs/contributor-playground/pull/1224) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
-4. ❌ Reopened PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+1. 🗣 Commented on [#2936](https://github.com/kubernetes-sigs/gateway-api/issues/2936#issuecomment-2118411784) in [kubernetes-sigs/gateway-api](https://github.com/kubernetes-sigs/gateway-api)
+2. 🗣 Commented on [#2777](https://github.com/nvim-telescope/telescope.nvim/issues/2777#issuecomment-2116884345) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+3. ❌ Closed PR [#1223](https://github.com/kubernetes-sigs/contributor-playground/pull/1223) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
+4. 💪 Opened PR [#1224](https://github.com/kubernetes-sigs/contributor-playground/pull/1224) in [kubernetes-sigs/contributor-playground](https://github.com/kubernetes-sigs/contributor-playground)
 <!--END_SECTION:activity-->
 
 <br/>
