@@ -12,7 +12,7 @@ More about me?
 
  ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
  <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/stars/MovieMaker93?logo=github&style=flat" /></a>
- <a href="https://zenn.dev/kou_pg_0131"><img src="https://badgen.org/img/zenn/kou_pg_0131/articles?style=plastic" alt="Articles" /></a>
+ <a href="https://alfonsofortunato.com/"><img src="https://badgen.org/img/zenn/kou_pg_0131/articles?style=plastic" alt="Articles" /></a>
  
 
 ## 🌱 I'm currently learning
