@@ -86,7 +86,7 @@ More about me?
 <!--
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=R3DRUN3&layout=compact)](https://github.com/yushi1007)
 -->
-[![MovieMaker93’s github stats](https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=dark&hide=stars,contribs)](https://github.com/MovieMaker93)
+[![MovieMaker93’s github stats](https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=dark)](https://github.com/MovieMaker93)
 <br/>
 [![GitHub Streak](https://streak-stats.demolab.com?user=MovieMaker93&theme=dark&background=000000)](https://github.com/MovieMaker93)
 <br/>
