@@ -18,7 +18,7 @@ More about me?
  </p>
  
 ## 🌱 I'm currently learning
-![](https://img.shields.io/badge/Code-Lua-Informational?style=for-the-badge&logo=lua&logoColor=white)
+![](https://img.shields.io/badge/Code-Lua-Informational?style=flat&logo=lua&logoColor=white)
 ![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=go&color=00ace6)
 
 ## 💁 Socials
@@ -40,7 +40,7 @@ More about me?
 
 ![](https://img.shields.io/badge/Code-java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white)
 ![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=go&color=00ace6)
-![](https://img.shields.io/badge/Code-Lua-Informational?style=for-the-badge&logo=lua&logoColor=white)
+![](https://img.shields.io/badge/Code-Lua-Informational?style=flat&logo=lua&logoColor=white)
 ![](https://img.shields.io/badge/Code-Rust-informational?style=flat&logo=rust&color=C13618)
 <br/>
 ![](https://img.shields.io/badge/Code-shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
