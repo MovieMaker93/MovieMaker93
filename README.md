@@ -10,13 +10,15 @@ More about me?
 
 <br/>
 
+ <p align="left">
  ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
  <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/stars/MovieMaker93?logo=github&style=flat" /></a>
- <a href="https://alfonsofortunato.com/"><img src="https://badgen.org/img/zenn/kou_pg_0131/articles?style=plastic" alt="Articles" /></a>
+ <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/followers/MovieMaker93?label=follow&logo=github&style=flat" /></a>
+ </p>
  
-
 ## 🌱 I'm currently learning
-![](https://img.shields.io/badge/Code-Rust-informational?style=for-the-badge&logo=rust&color=C13618)
+![](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=go&color=00ace6)
 
 ## 💁 Socials
 <div id="badges">
@@ -37,7 +39,7 @@ More about me?
 
 ![](https://img.shields.io/badge/Code-java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white)
 ![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=go&color=00ace6)
-![](https://img.shields.io/badge/Code-javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
+![](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 ![](https://img.shields.io/badge/Code-Rust-informational?style=flat&logo=rust&color=C13618)
 <br/>
 ![](https://img.shields.io/badge/Code-shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
