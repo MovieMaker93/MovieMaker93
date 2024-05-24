@@ -12,10 +12,10 @@ More about me?
 
 
  ![](https://komarev.com/ghpvc/?username=MovieMaker93&label=PROFILE+VIEWS&color=brightgreen)
- <p align="left">
- <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/stars/MovieMaker93?logo=github&style=flat" /></a>
- <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/followers/MovieMaker93?label=follow&logo=github&style=flat" /></a>
- </p>
+# <p align="left">
+# <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/stars/MovieMaker93?logo=github&style=flat" /></a>
+# <a href="https://github.com/MovieMaker93"><img height="20" src="https://img.shields.io/github/followers/MovieMaker93?label=follow&logo=github&style=flat" /></a>
+# </p>
  
 ## 🌱 I'm currently learning
 ![](https://img.shields.io/badge/Code-Lua-Informational?style=flat&logo=lua&logoColor=white)
