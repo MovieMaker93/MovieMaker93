@@ -27,7 +27,11 @@ More about me?
 <a href="https://medium.com/@alfor93">
   <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium Badge"/>
 </a>
-  
+
+<a href="mailto:fortunato.alfonso@proton.me">
+<img src="https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white" alt="Protonmail badge />
+</a>
+ 
 <br/>
 
 <br/>
