@@ -95,8 +95,8 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#9](https://github.com/mischavandenburg/kubecraft/pull/9) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
-2. 💪 Opened PR [#3139](https://github.com/nvim-telescope/telescope.nvim/pull/3139) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+1. 🗣 Commented on [#9](https://github.com/mischavandenburg/kubecraft/pull/9#issuecomment-2285841761) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
+2. 💪 Opened PR [#9](https://github.com/mischavandenburg/kubecraft/pull/9) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
 3. 🗣 Commented on [#3117](https://github.com/nvim-telescope/telescope.nvim/issues/3117#issuecomment-2131274166) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 4. 🗣 Commented on [#3117](https://github.com/nvim-telescope/telescope.nvim/issues/3117#issuecomment-2128146595) in [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 <!--END_SECTION:activity-->
