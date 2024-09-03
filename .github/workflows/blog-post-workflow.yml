@@ -16,5 +16,5 @@ jobs:
       - name: Pull in alfonsofortunato blog posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https:/alfonsofortunato/index.xml"
+          feed_list: "https://alfonsofortunato/index.xml"
           max_post_count: 5
