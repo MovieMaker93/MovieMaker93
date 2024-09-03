@@ -6,7 +6,7 @@ More about me?
 - ☁️ ☸ **Kubernetes and AWS certified**
 - 💬 **Open Source Contributor**
 - :mag: Feel free to check out my [Blog](https://alfonsofortunato.com/)
-- :computer: Love 3d printing and keyboard modding.
+- :white_square_button: Obsessed by command line, note taking and productivity
 
 <br/>
 
@@ -35,6 +35,10 @@ More about me?
 <br/>
 
 <br/>
+
+# Recent Blog posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 ## My toolkit 🧰:
 
