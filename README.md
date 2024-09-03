@@ -22,6 +22,13 @@ More about me?
   <a href="https://www.linkedin.com/in/alfonso-fortunato-a37056b9/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
+   <a href="https://x.com/devopsfortunato">
+    <img src="https://img.shields.io/badge/X-blue?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Badge"/>
+  </a>
+  </div>
+
+ <div id="badges">
+
   </div>
 
 <a href="https://medium.com/@alfor93">
