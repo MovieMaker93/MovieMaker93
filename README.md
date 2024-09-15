@@ -46,7 +46,7 @@ More about me?
 # Recent Blog posts
 <!-- BLOG-POST-LIST:START -->
 - [Cross-Platform Dotfiles with Chezmoi, Nix, Brew, and Devpod](https://alfonsofortunato.com/posts/dotfile/)
-- [Simplifying Secret Management with Azure Key Vault and External Secret Operator](https://alfonsofortunato.com/posts/homelab-secrets/)
+- [Simplifying Secret Management with Azure Key Vault and External Secret Operator](https://alfonsofortunato.com/posts/secret-handling/)
 - [Homelab: Installation and Configuration of Talos on Raspberry Pi](https://alfonsofortunato.com/posts/homelab-talos/)
 - [Starting Small: The Beginning of My Kubernetes Homelab Journey](https://alfonsofortunato.com/posts/homelab/)
 - [Code, Clusters, and Gelato: A DevOps Summer Story](https://alfonsofortunato.com/posts/devops/)
