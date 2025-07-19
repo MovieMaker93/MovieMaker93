@@ -111,7 +111,7 @@ More about me?
 ## Recent Activities on GitHub
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#242](https://github.com/wallabag/docker/issues/242#issuecomment-2307979556) in [wallabag/docker](https://github.com/wallabag/docker)
+1. 🗣 Commented on [#1](https://github.com/MovieMaker93/devpod-dotfiles-chezmoi/issues/1#issuecomment-3090399588) in [MovieMaker93/devpod-dotfiles-chezmoi](https://github.com/MovieMaker93/devpod-dotfiles-chezmoi)
 2. 💪 Opened PR [#15](https://github.com/mischavandenburg/kubecraft/pull/15) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
 3. 🗣 Commented on [#9](https://github.com/mischavandenburg/kubecraft/pull/9#issuecomment-2285841761) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
 4. 💪 Opened PR [#9](https://github.com/mischavandenburg/kubecraft/pull/9) in [mischavandenburg/kubecraft](https://github.com/mischavandenburg/kubecraft)
