@@ -45,11 +45,11 @@ More about me?
 
 # Recent Blog posts
 <!-- BLOG-POST-LIST:START -->
-- [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/posts/ghostty/)
-- [Dagger and GitHub Actions: Simplifying CI/CD Pipelines](https://alfonsofortunato.com/posts/dagger/)
-- [Arch Linux on VMware: Setting Up Sway and Wayland](https://alfonsofortunato.com/posts/arch-linux-vmware/)
-- [Arch Linux installation with Encryption, LVM, GNOME on VirtualBox: The Hard way](https://alfonsofortunato.com/posts/arch-linux-virtualbox/)
-- [Cross-Platform Dotfiles with Chezmoi, Nix, Brew, and Devpod](https://alfonsofortunato.com/posts/dotfile/)
+- [DevPod Dotfiles with Chezmoi](https://alfonsofortunato.com/projects/devpod-dotfiles-chezmoi/)
+- [Homelab Kubernetes](https://alfonsofortunato.com/projects/homelab-k8s/)
+- [Note CLI](https://alfonsofortunato.com/projects/note-cli/)
+- [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/blog/ghostty/)
+- [Dagger and GitHub Actions: Simplifying CI/CD Pipelines](https://alfonsofortunato.com/blog/dagger/)
 <!-- BLOG-POST-LIST:END -->
 
 ## My toolkit 🧰:
