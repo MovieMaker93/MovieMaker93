@@ -45,11 +45,11 @@ More about me?
 
 # Recent Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [How I Passed KCNA and KCSA — And What to Actually Study](https://alfonsofortunato.com/blog/kcna-kcsa-study-guide-a-practical-path-toward-kubeastronaut/)
 - [DevPod Dotfiles with Chezmoi](https://alfonsofortunato.com/projects/devpod-dotfiles-chezmoi/)
 - [Homelab Kubernetes](https://alfonsofortunato.com/projects/homelab-k8s/)
 - [Note CLI](https://alfonsofortunato.com/projects/note-cli/)
 - [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/blog/ghostty/)
-- [Dagger and GitHub Actions: Simplifying CI/CD Pipelines](https://alfonsofortunato.com/blog/dagger/)
 <!-- BLOG-POST-LIST:END -->
 
 ## My toolkit 🧰:
