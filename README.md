@@ -45,11 +45,11 @@ More about me?
 
 # Recent Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Gemma 4 E4B vs 26B on an RTX 4070 Ti: Benchmarks, RAG, and a Real Webapp Test](https://alfonsofortunato.com/blog/gemma-4-e4b-vs-26b-local-benchmarks/)
 - [How I Passed KCNA and KCSA — And What to Actually Study](https://alfonsofortunato.com/blog/kcna-kcsa-study-guide-a-practical-path-toward-kubeastronaut/)
+- [Kubernetes and Cloud Native Associate &lpar;KCNA&rpar;](https://alfonsofortunato.com/certifications/kcna/)
+- [Kubernetes and Cloud Native Security Associate &lpar;KCSA&rpar;](https://alfonsofortunato.com/certifications/kcsa/)
 - [DevPod Dotfiles with Chezmoi](https://alfonsofortunato.com/projects/devpod-dotfiles-chezmoi/)
-- [Homelab Kubernetes](https://alfonsofortunato.com/projects/homelab-k8s/)
-- [Note CLI](https://alfonsofortunato.com/projects/note-cli/)
-- [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/blog/ghostty/)
 <!-- BLOG-POST-LIST:END -->
 
 ## My toolkit 🧰:
