@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const README_PATH = new URL("../README.md", import.meta.url);
 const SECTION_HEADING = "## 🚀 Featured Projects";
 const PROJECT_ROW =
-  /^\| \[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\) \|.*\| ⭐ (\d+) \|$/gm;
+  /^\| \[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\/?\) \|.*\| ⭐ (\d+) \|$/gm;
 
 function featuredProjectsSection(readme) {
   const sectionStart = readme.indexOf(SECTION_HEADING);
@@ -23,22 +23,33 @@ function featuredProjectsSection(readme) {
   };
 }
 
-export function extractProjects(readme) {
-  const { content } = featuredProjectsSection(readme);
-  const projects = [...content.matchAll(PROJECT_ROW)].map(([, owner, repo]) => ({
-    owner,
-    repo,
-  }));
+function projectRows(content) {
+  const rows = content
+    .split("\n")
+    .filter((line) => line.startsWith("|"))
+    .filter((line) => !/^\| Project \| Description \| Stars \|$/.test(line))
+    .filter((line) => !/^\|[-:| ]+\|$/.test(line));
 
-  if (projects.length === 0) {
-    throw new Error("Featured Projects table was not found");
+  const matches = rows.map((row) => row.match(new RegExp(PROJECT_ROW.source)));
+  if (matches.every((match) => match === null)) {
+    throw new Error("Featured Projects table contains no repository rows");
+  }
+  if (matches.some((match) => match === null)) {
+    throw new Error("Featured Projects table contains malformed repository rows");
   }
 
-  return projects;
+  return matches;
+}
+
+export function extractProjects(readme) {
+  const { content } = featuredProjectsSection(readme);
+
+  return projectRows(content).map(([, owner, repo]) => ({ owner, repo }));
 }
 
 export function replaceStarCounts(readme, counts) {
   const { content, start, end } = featuredProjectsSection(readme);
+  projectRows(content);
   const updatedContent = content.replace(
     PROJECT_ROW,
     (row, owner, repo) => {
