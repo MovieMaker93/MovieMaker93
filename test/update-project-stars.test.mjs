@@ -245,3 +245,105 @@ test("retries GitHub rate limits before fetching a star count", async () => {
   assert.equal(stars, 42);
   assert.equal(attempts, 3);
 });
+
+test("does not retry ordinary GitHub forbidden responses", async () => {
+  let attempts = 0;
+
+  await assert.rejects(
+    fetchStarCount("example", "forbidden", {
+      fetchImpl: async () => {
+        attempts += 1;
+        return new Response("Forbidden", { status: 403 });
+      },
+      retryDelayMs: 0,
+    }),
+    /HTTP 403/,
+  );
+
+  assert.equal(attempts, 1);
+});
+
+test("retries GitHub rate-limited forbidden responses", async () => {
+  let attempts = 0;
+  const waits = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts === 1) {
+        return new Response("Rate limited", {
+          headers: { "x-ratelimit-remaining": "0" },
+          status: 403,
+        });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+    waitImpl: async (milliseconds) => waits.push(milliseconds),
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(attempts, 2);
+  assert.deepEqual(waits, [0]);
+});
+
+test("uses Retry-After to delay retryable GitHub responses", async () => {
+  let attempts = 0;
+  const waits = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts === 1) {
+        return new Response("Rate limited", {
+          headers: { "retry-after": "7" },
+          status: 429,
+        });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 1,
+    waitImpl: async (milliseconds) => waits.push(milliseconds),
+  });
+
+  assert.equal(stars, 42);
+  assert.deepEqual(waits, [7_000]);
+});
+
+test("uses X-RateLimit-Reset to delay retryable GitHub responses", async () => {
+  let attempts = 0;
+  const waits = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts === 1) {
+        return new Response("Rate limited", {
+          headers: { "x-ratelimit-reset": "105" },
+          status: 429,
+        });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    nowImpl: () => 100_000,
+    retryDelayMs: 1,
+    waitImpl: async (milliseconds) => waits.push(milliseconds),
+  });
+
+  assert.equal(stars, 42);
+  assert.deepEqual(waits, [5_000]);
+});
+
+test("rejects negative GitHub star counts", async () => {
+  let attempts = 0;
+
+  await assert.rejects(
+    fetchStarCount("example", "alpha", {
+      fetchImpl: async () => {
+        attempts += 1;
+        return new Response(JSON.stringify({ stargazers_count: -1 }));
+      },
+      retryDelayMs: 0,
+    }),
+    /invalid stargazers_count/,
+  );
+
+  assert.equal(attempts, 1);
+});

@@ -69,6 +69,36 @@ function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
+function isRateLimitedResponse(response) {
+  return (
+    response.status === 429 ||
+    (response.status === 403 &&
+      (response.headers.get("x-ratelimit-remaining") === "0" ||
+        response.headers.has("retry-after")))
+  );
+}
+
+function rateLimitDelay(response, fallbackDelay, now) {
+  const retryAfter = response.headers.get("retry-after");
+  if (retryAfter !== null) {
+    const retryAfterSeconds = Number(retryAfter);
+    if (Number.isFinite(retryAfterSeconds) && retryAfterSeconds >= 0) {
+      return retryAfterSeconds * 1_000;
+    }
+  }
+
+  const reset = response.headers.get("x-ratelimit-reset");
+  if (reset !== null) {
+    const resetSeconds = Number(reset);
+    const resetDelay = resetSeconds * 1_000 - now();
+    if (Number.isFinite(resetSeconds) && resetDelay > 0) {
+      return resetDelay;
+    }
+  }
+
+  return fallbackDelay;
+}
+
 export async function fetchStarCount(
   owner,
   repo,
@@ -77,6 +107,8 @@ export async function fetchStarCount(
     fetchImpl = fetch,
     retryDelayMs = 1_000,
     token = process.env.GITHUB_TOKEN,
+    waitImpl = delay,
+    nowImpl = Date.now,
   } = {},
 ) {
   const url = `https://api.github.com/repos/${owner}/${repo}`;
@@ -97,7 +129,8 @@ export async function fetchStarCount(
       });
       if (!response.ok) {
         const error = new Error(`${url} returned HTTP ${response.status}`);
-        const isRetryable = response.status === 429 || response.status >= 500;
+        const isRateLimited = isRateLimitedResponse(response);
+        const isRetryable = isRateLimited || response.status >= 500;
         if (!isRetryable) {
           error.nonRetryable = true;
           throw error;
@@ -105,7 +138,12 @@ export async function fetchStarCount(
         if (attempt === attempts) {
           throw error;
         }
-        await delay(retryDelayMs * attempt);
+        const fallbackDelay = retryDelayMs * attempt;
+        await waitImpl(
+          isRateLimited
+            ? rateLimitDelay(response, fallbackDelay, nowImpl)
+            : fallbackDelay,
+        );
         continue;
       }
 
@@ -116,7 +154,10 @@ export async function fetchStarCount(
         error.nonRetryable = true;
         throw error;
       }
-      if (!Number.isInteger(payload?.stargazers_count)) {
+      if (
+        !Number.isSafeInteger(payload?.stargazers_count) ||
+        payload.stargazers_count < 0
+      ) {
         const error = new Error(`${url} returned invalid stargazers_count`);
         error.nonRetryable = true;
         throw error;
@@ -127,7 +168,7 @@ export async function fetchStarCount(
       if (error?.nonRetryable || attempt === attempts) {
         throw error;
       }
-      await delay(retryDelayMs * attempt);
+      await waitImpl(retryDelayMs * attempt);
     }
   }
 
