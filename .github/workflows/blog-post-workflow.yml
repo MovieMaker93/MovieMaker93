@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-readme-with-blog:
+  update-profile-content:
     name: Update README profile content
     runs-on: ubuntu-latest
 

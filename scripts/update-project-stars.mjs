@@ -3,8 +3,8 @@ import { readFile, writeFile } from "node:fs/promises";
 const README_PATH = new URL("../README.md", import.meta.url);
 const SECTION_HEADING = "## 🚀 Featured Projects";
 const MINIMUM_RATE_LIMIT_DELAY_MS = 60_000;
-const PROJECT_ROW =
-  /^\| \[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\/?\) \|.*\| ⭐ (\d+) \|$/gm;
+const PROJECT_CELL =
+  /^\[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\/?\)$/;
 
 function featuredProjectsSection(readme) {
   const sectionStart = readme.indexOf(SECTION_HEADING);
@@ -24,44 +24,105 @@ function featuredProjectsSection(readme) {
   };
 }
 
-function projectRows(content) {
-  const rows = content
-    .split("\n")
-    .filter((line) => line.startsWith("|"))
-    .filter((line) => !/^\| Project \| Description \| Stars \|$/.test(line))
-    .filter((line) => !/^\|[-:| ]+\|$/.test(line));
+function tableCells(line) {
+  let content = line.trim();
+  if (!content || !content.includes("|")) {
+    return null;
+  }
+  if (content.startsWith("|")) {
+    content = content.slice(1);
+  }
+  if (content.endsWith("|")) {
+    content = content.slice(0, -1);
+  }
 
-  const matches = rows.map((row) => row.match(new RegExp(PROJECT_ROW.source)));
-  if (matches.every((match) => match === null)) {
+  const cells = content.split("|").map((cell) => cell.trim());
+  return cells.length === 3 && cells.every(Boolean) ? cells : null;
+}
+
+function isHeader(cells) {
+  return (
+    cells?.[0] === "Project" &&
+    cells[1] === "Description" &&
+    cells[2] === "Stars"
+  );
+}
+
+function isSeparator(cells) {
+  return (
+    cells?.length === 3 &&
+    cells.every((cell) => /^:?-{3,}:?$/.test(cell))
+  );
+}
+
+function projectRow(line, index) {
+  const cells = tableCells(line);
+  const project = cells?.[0].match(PROJECT_CELL);
+  const stars = cells?.[2].match(/^⭐\s+(\d+)$/);
+  if (!project || !stars) {
+    return null;
+  }
+
+  return {
+    index,
+    line,
+    owner: project[1],
+    repo: project[2],
+  };
+}
+
+function featuredProjectsTable(content) {
+  const lines = content.split("\n");
+  const headerIndex = lines.findIndex((line) => isHeader(tableCells(line)));
+  if (headerIndex === -1 || !isSeparator(tableCells(lines[headerIndex + 1]))) {
+    throw new Error("Featured Projects table was not found");
+  }
+
+  const rows = [];
+  for (let index = headerIndex + 2; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (!line.trim()) {
+      break;
+    }
+
+    const row = projectRow(line, index);
+    if (!row) {
+      throw new Error("Featured Projects table contains malformed repository rows");
+    }
+    rows.push(row);
+  }
+
+  if (rows.length === 0) {
     throw new Error("Featured Projects table contains no repository rows");
   }
-  if (matches.some((match) => match === null)) {
-    throw new Error("Featured Projects table contains malformed repository rows");
-  }
 
-  return matches;
+  return { lines, rows };
 }
 
 export function extractProjects(readme) {
   const { content } = featuredProjectsSection(readme);
 
-  return projectRows(content).map(([, owner, repo]) => ({ owner, repo }));
+  return featuredProjectsTable(content).rows.map(({ owner, repo }) => ({
+    owner,
+    repo,
+  }));
 }
 
 export function replaceStarCounts(readme, counts) {
   const { content, start, end } = featuredProjectsSection(readme);
-  projectRows(content);
-  const updatedContent = content.replace(
-    PROJECT_ROW,
-    (row, owner, repo) => {
-      const project = `${owner}/${repo}`;
-      if (!counts.has(project)) {
-        throw new Error(`Missing star count for ${project}`);
-      }
+  const { lines, rows } = featuredProjectsTable(content);
+  for (const { index, line, owner, repo } of rows) {
+    const project = `${owner}/${repo}`;
+    if (!counts.has(project)) {
+      throw new Error(`Missing star count for ${project}`);
+    }
 
-      return row.replace(/⭐ \d+ \|$/, `⭐ ${counts.get(project)} |`);
-    },
-  );
+    lines[index] = line.replace(
+      /(⭐\s*)\d+(\s*\|?\s*)$/,
+      `$1${counts.get(project)}$2`,
+    );
+  }
+  const updatedContent = lines.join("\n");
 
   return `${readme.slice(0, start)}${updatedContent}${readme.slice(end)}`;
 }
@@ -155,7 +216,14 @@ export async function fetchStarCount(
         const fallbackDelay = retryDelayMs * attempt;
         await waitImpl(
           isRateLimited
-            ? rateLimitDelay(response, fallbackDelay, nowImpl)
+            ? rateLimitDelay(
+                response,
+                Math.max(
+                  fallbackDelay,
+                  MINIMUM_RATE_LIMIT_DELAY_MS * 2 ** (attempt - 1),
+                ),
+                nowImpl,
+              )
             : fallbackDelay,
         );
         continue;
@@ -189,23 +257,34 @@ export async function fetchStarCount(
   throw new Error(`Failed to fetch ${url}`);
 }
 
-async function main() {
-  const readme = await readFile(README_PATH, "utf8");
+export async function updateProjectStars({
+  fetchStarCountImpl = fetchStarCount,
+  logImpl = console.log,
+  readFileImpl = readFile,
+  readmePath = README_PATH,
+  writeFileImpl = writeFile,
+} = {}) {
+  const readme = await readFileImpl(readmePath, "utf8");
   const projects = extractProjects(readme);
   const counts = new Map();
 
   for (const { owner, repo } of projects) {
-    counts.set(`${owner}/${repo}`, await fetchStarCount(owner, repo));
+    counts.set(`${owner}/${repo}`, await fetchStarCountImpl(owner, repo));
   }
 
   const updatedReadme = replaceStarCounts(readme, counts);
   if (updatedReadme === readme) {
-    console.log("Featured project stars are already up to date");
-    return;
+    logImpl("Featured project stars are already up to date");
+    return false;
   }
 
-  await writeFile(README_PATH, updatedReadme);
-  console.log(`Updated star counts for ${projects.length} featured projects`);
+  await writeFileImpl(readmePath, updatedReadme);
+  logImpl(`Updated star counts for ${projects.length} featured projects`);
+  return true;
+}
+
+async function main() {
+  await updateProjectStars();
 }
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {

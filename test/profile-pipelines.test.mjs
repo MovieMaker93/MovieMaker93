@@ -31,11 +31,20 @@ test("blog updater uses the sitemap-backed local script", () => {
   assert.doesNotMatch(blogWorkflow, /alfonsofortunato\.com\/index\.xml/);
 });
 
-test("profile workflow updates project stars before committing", () => {
-  const updatePosition = blogWorkflow.indexOf("node scripts/update-project-stars.mjs");
-  const commitPosition = blogWorkflow.indexOf("git commit");
+test("profile workflow runs each updater once before committing with a scoped token", () => {
+  const blogCommand = "node scripts/update-blog-posts.mjs";
+  const starStep = `      - name: Update featured project stars
+        run: node scripts/update-project-stars.mjs
+        env:
+          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}`;
+  const commitStep = "      - name: Commit README";
 
-  assert.ok(updatePosition >= 0);
-  assert.ok(commitPosition > updatePosition);
-  assert.match(blogWorkflow, /GITHUB_TOKEN: \$\{\{ secrets\.GITHUB_TOKEN \}\}/);
+  assert.match(blogWorkflow, /^  update-profile-content:/m);
+  assert.equal(blogWorkflow.split(blogCommand).length - 1, 1);
+  assert.equal(blogWorkflow.split("node scripts/update-project-stars.mjs").length - 1, 1);
+  assert.equal(blogWorkflow.split("git commit").length - 1, 1);
+  assert.equal(blogWorkflow.split("GITHUB_TOKEN:").length - 1, 1);
+  assert.ok(blogWorkflow.indexOf(blogCommand) < blogWorkflow.indexOf(starStep));
+  assert.ok(blogWorkflow.indexOf(starStep) < blogWorkflow.indexOf(commitStep));
+  assert.equal(blogWorkflow.indexOf("GITHUB_TOKEN:"), blogWorkflow.indexOf(starStep) + starStep.indexOf("GITHUB_TOKEN:"));
 });
