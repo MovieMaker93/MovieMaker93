@@ -71,7 +71,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland** — I transitioned
 
 | Project | Description | Stars |
 |---------|-------------|:-----:|
-| [devpod-dotfiles-chezmoi](https://github.com/MovieMaker93/devpod-dotfiles-chezmoi) | Cross-platform dotfiles for Zsh, Tmux, Neovim & Bitwarden — works on workstations, DevPods, and DevContainers | ⭐ 22 |
+| [devpod-dotfiles-chezmoi](https://github.com/MovieMaker93/devpod-dotfiles-chezmoi) | Cross-platform dotfiles for Zsh, Tmux, Neovim & Bitwarden — works on workstations, DevPods, and DevContainers | ⭐ 24 |
 | [homelab-k8s](https://github.com/MovieMaker93/homelab-k8s) | My Homelab Kubernetes playground — where mistakes are the curriculum | ⭐ 3 |
 | [note-cli](https://github.com/MovieMaker93/note-cli) | CLI for Zettelkasten-style notes, integrating Neovim & Obsidian | ⭐ 2 |
 | [telescope-ghissue.nvim](https://github.com/MovieMaker93/telescope-ghissue.nvim) | Neovim Telescope plugin for browsing GitHub issues in-editor | ⭐ 1 |

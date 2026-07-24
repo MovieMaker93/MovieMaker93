@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   extractProjects,
+  fetchStarCount,
   replaceStarCounts,
 } from "../scripts/update-project-stars.mjs";
 
@@ -118,4 +119,112 @@ test("throws when a required project star count is missing", () => {
       ),
     /Missing star count for example\/beta/,
   );
+});
+
+test("fetches a repository's star count from GitHub", async () => {
+  const requests = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async (url, init) => {
+      requests.push({ url, init });
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(requests.length, 1);
+  assert.equal(requests[0].url, "https://api.github.com/repos/example/alpha");
+  assert.equal(requests[0].init.headers.accept, "application/vnd.github+json");
+  assert.equal(
+    requests[0].init.headers["user-agent"],
+    "MovieMaker93-profile-readme-updater",
+  );
+  assert.equal(requests[0].init.headers["x-github-api-version"], "2022-11-28");
+});
+
+test("rejects malformed star-count payloads without retrying", async () => {
+  let attempts = 0;
+
+  await assert.rejects(
+    fetchStarCount("example", "alpha", {
+      fetchImpl: async () => {
+        attempts += 1;
+        return new Response(JSON.stringify({ stargazers_count: "many" }));
+      },
+      retryDelayMs: 0,
+    }),
+    /invalid stargazers_count/,
+  );
+
+  assert.equal(attempts, 1);
+});
+
+test("rejects malformed GitHub JSON without retrying", async () => {
+  let attempts = 0;
+
+  await assert.rejects(
+    fetchStarCount("example", "alpha", {
+      fetchImpl: async () => {
+        attempts += 1;
+        return new Response("not JSON");
+      },
+      retryDelayMs: 0,
+    }),
+    SyntaxError,
+  );
+
+  assert.equal(attempts, 1);
+});
+
+test("retries transient network failures before fetching a star count", async () => {
+  let attempts = 0;
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts < 3) {
+        const error = new Error("connection reset");
+        error.code = "ECONNRESET";
+        throw error;
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(attempts, 3);
+});
+
+test("does not retry non-retryable GitHub HTTP errors", async () => {
+  let attempts = 0;
+
+  await assert.rejects(
+    fetchStarCount("example", "missing", {
+      fetchImpl: async () => {
+        attempts += 1;
+        return new Response("Not found", { status: 404 });
+      },
+      retryDelayMs: 0,
+    }),
+    /HTTP 404/,
+  );
+
+  assert.equal(attempts, 1);
+});
+
+test("retries retryable GitHub server errors", async () => {
+  let attempts = 0;
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts < 3) {
+        return new Response("Server error", { status: 500 });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(attempts, 3);
 });
