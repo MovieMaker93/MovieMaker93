@@ -228,3 +228,20 @@ test("retries retryable GitHub server errors", async () => {
   assert.equal(stars, 42);
   assert.equal(attempts, 3);
 });
+
+test("retries GitHub rate limits before fetching a star count", async () => {
+  let attempts = 0;
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts < 3) {
+        return new Response("Rate limited", { status: 429 });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(attempts, 3);
+});
