@@ -1,4 +1,4 @@
-name: Latest blog posts
+name: Update profile content
 
 on:
   schedule:
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   update-readme-with-blog:
-    name: Update this repo's README with latest blog posts
+    name: Update README profile content
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,11 @@ jobs:
 
       - name: Update latest blog posts from sitemap
         run: node scripts/update-blog-posts.mjs
+
+      - name: Update featured project stars
+        run: node scripts/update-project-stars.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit README
         run: |
@@ -34,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "docs: update latest blog posts"
+          git commit -m "docs: update profile content"
           git push

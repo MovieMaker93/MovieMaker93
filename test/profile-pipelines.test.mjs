@@ -30,3 +30,12 @@ test("blog updater uses the sitemap-backed local script", () => {
   assert.match(blogWorkflow, /node scripts\/update-blog-posts\.mjs/);
   assert.doesNotMatch(blogWorkflow, /alfonsofortunato\.com\/index\.xml/);
 });
+
+test("profile workflow updates project stars before committing", () => {
+  const updatePosition = blogWorkflow.indexOf("node scripts/update-project-stars.mjs");
+  const commitPosition = blogWorkflow.indexOf("git commit");
+
+  assert.ok(updatePosition >= 0);
+  assert.ok(commitPosition > updatePosition);
+  assert.match(blogWorkflow, /GITHUB_TOKEN: \$\{\{ secrets\.GITHUB_TOKEN \}\}/);
+});
