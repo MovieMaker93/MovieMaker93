@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const README_PATH = new URL("../README.md", import.meta.url);
 const SECTION_HEADING = "## 🚀 Featured Projects";
+const MINIMUM_RATE_LIMIT_DELAY_MS = 60_000;
 const PROJECT_ROW =
   /^\| \[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\/?\) \|.*\| ⭐ (\d+) \|$/gm;
 
@@ -69,13 +70,26 @@ function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
-function isRateLimitedResponse(response) {
-  return (
-    response.status === 429 ||
-    (response.status === 403 &&
-      (response.headers.get("x-ratelimit-remaining") === "0" ||
-        response.headers.has("retry-after")))
-  );
+async function isRateLimitedResponse(response) {
+  if (response.status === 429) {
+    return true;
+  }
+  if (response.status !== 403) {
+    return false;
+  }
+  if (
+    response.headers.get("x-ratelimit-remaining") === "0" ||
+    response.headers.has("retry-after")
+  ) {
+    return true;
+  }
+
+  try {
+    const body = await response.clone().text();
+    return /secondary rate limit|api rate limit exceeded/i.test(body);
+  } catch {
+    return false;
+  }
 }
 
 function rateLimitDelay(response, fallbackDelay, now) {
@@ -96,7 +110,7 @@ function rateLimitDelay(response, fallbackDelay, now) {
     }
   }
 
-  return fallbackDelay;
+  return Math.max(fallbackDelay, MINIMUM_RATE_LIMIT_DELAY_MS);
 }
 
 export async function fetchStarCount(
@@ -129,7 +143,7 @@ export async function fetchStarCount(
       });
       if (!response.ok) {
         const error = new Error(`${url} returned HTTP ${response.status}`);
-        const isRateLimited = isRateLimitedResponse(response);
+        const isRateLimited = await isRateLimitedResponse(response);
         const isRetryable = isRateLimited || response.status >= 500;
         if (!isRetryable) {
           error.nonRetryable = true;

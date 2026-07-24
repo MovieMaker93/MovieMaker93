@@ -240,6 +240,7 @@ test("retries GitHub rate limits before fetching a star count", async () => {
       return new Response(JSON.stringify({ stargazers_count: 42 }));
     },
     retryDelayMs: 0,
+    waitImpl: async () => {},
   });
 
   assert.equal(stars, 42);
@@ -283,7 +284,51 @@ test("retries GitHub rate-limited forbidden responses", async () => {
 
   assert.equal(stars, 42);
   assert.equal(attempts, 2);
-  assert.deepEqual(waits, [0]);
+  assert.deepEqual(waits, [60_000]);
+});
+
+test("retries message-only secondary GitHub rate limits", async () => {
+  let attempts = 0;
+  const waits = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts === 1) {
+        return new Response(
+          JSON.stringify({
+            message: "You have exceeded a secondary rate limit.",
+          }),
+          { status: 403 },
+        );
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 0,
+    waitImpl: async (milliseconds) => waits.push(milliseconds),
+  });
+
+  assert.equal(stars, 42);
+  assert.equal(attempts, 2);
+  assert.deepEqual(waits, [60_000]);
+});
+
+test("uses a minimum delay for headerless GitHub rate limits", async () => {
+  let attempts = 0;
+  const waits = [];
+  const stars = await fetchStarCount("example", "alpha", {
+    fetchImpl: async () => {
+      attempts += 1;
+      if (attempts === 1) {
+        return new Response("Rate limited", { status: 429 });
+      }
+      return new Response(JSON.stringify({ stargazers_count: 42 }));
+    },
+    retryDelayMs: 1_000,
+    waitImpl: async (milliseconds) => waits.push(milliseconds),
+  });
+
+  assert.equal(stars, 42);
+  assert.deepEqual(waits, [60_000]);
 });
 
 test("uses Retry-After to delay retryable GitHub responses", async () => {
