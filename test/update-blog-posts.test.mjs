@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  fetchText,
   latestBlogUrls,
   replaceBlogList,
   titleFromHtml,
@@ -49,4 +50,25 @@ After`;
 <!-- BLOG-POST-LIST:END -->
 After`,
   );
+});
+
+test("retries transient network failures", async () => {
+  let attempts = 0;
+  const fetchImpl = async () => {
+    attempts += 1;
+    if (attempts < 3) {
+      throw new Error("read ECONNRESET");
+    }
+    return new Response("ok");
+  };
+
+  assert.equal(
+    await fetchText("https://example.com", {
+      attempts: 3,
+      fetchImpl,
+      retryDelayMs: 0,
+    }),
+    "ok",
+  );
+  assert.equal(attempts, 3);
 });

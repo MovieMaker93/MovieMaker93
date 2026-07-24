@@ -82,16 +82,36 @@ export function replaceBlogList(readme, posts) {
   );
 }
 
-async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: { "user-agent": "MovieMaker93-profile-readme-updater" },
-    redirect: "follow",
-    signal: AbortSignal.timeout(15_000),
-  });
-  if (!response.ok) {
-    throw new Error(`${url} returned HTTP ${response.status}`);
+export async function fetchText(
+  url,
+  {
+    attempts = 3,
+    fetchImpl = fetch,
+    retryDelayMs = 1_000,
+  } = {},
+) {
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetchImpl(url, {
+        headers: { "user-agent": "MovieMaker93-profile-readme-updater" },
+        redirect: "follow",
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (!response.ok) {
+        throw new Error(`${url} returned HTTP ${response.status}`);
+      }
+      return await response.text();
+    } catch (error) {
+      if (attempt === attempts) {
+        throw error;
+      }
+      await new Promise((resolve) =>
+        setTimeout(resolve, retryDelayMs * attempt),
+      );
+    }
   }
-  return response.text();
+
+  throw new Error(`Failed to fetch ${url}`);
 }
 
 async function main() {
@@ -101,12 +121,13 @@ async function main() {
     throw new Error("No blog posts found in the sitemap");
   }
 
-  const posts = await Promise.all(
-    entries.map(async ({ url }) => ({
+  const posts = [];
+  for (const { url } of entries) {
+    posts.push({
       title: titleFromHtml(await fetchText(url)),
       url: new URL(url).href,
-    })),
-  );
+    });
+  }
 
   const readme = await readFile(README_PATH, "utf8");
   const updatedReadme = replaceBlogList(readme, posts);
