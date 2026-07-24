@@ -1,17 +1,27 @@
 name: Update README
+
 on:
   schedule:
     - cron: "30 5,17 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-updaters
+  cancel-in-progress: false
+
 jobs:
   build:
     name: Update this repo's README with recent activity
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: jamesgeorge007/github-activity-readme@master
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Update recent GitHub activity
+        uses: jamesgeorge007/github-activity-readme@4aefbfa1c222d70537dc6a02f0519266aab2b1ea
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

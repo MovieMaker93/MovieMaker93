@@ -6,6 +6,7 @@
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alfonsofortunato/)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/devopsfortunato)
 [![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=hugo&logoColor=white)](https://alfonsofortunato.com)
 [![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:fortunato.alfonso@proton.me)
 
@@ -124,14 +125,19 @@ I'm deeply into the AI space — both the frontier and the local side:
 ## 📝 Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
-- [My Obsidian PKM Setup: Karpathy&#39;s LLM Wiki + Claude Code + Local Search](https://alfonsofortunato.com/blog/obsidian-pkm-llm-wiki/)
-- [Gemma 4 E4B vs 26B on an RTX 4070 Ti: Benchmarks, RAG, and a Real Webapp Test](https://alfonsofortunato.com/blog/gemma-4-e4b-vs-26b-local-benchmarks/)
-- [How I Passed KCNA and KCSA — And What to Actually Study](https://alfonsofortunato.com/blog/kcna-kcsa-study-guide-a-practical-path-toward-kubeastronaut/)
-- [Kubernetes and Cloud Native Associate &lpar;KCNA&rpar;](https://alfonsofortunato.com/certifications/kcna/)
-- [Kubernetes and Cloud Native Security Associate &lpar;KCSA&rpar;](https://alfonsofortunato.com/certifications/kcsa/)
+- [My Obsidian PKM Setup: Karpathy's LLM Wiki + Claude Code + Local Search](https://alfonsofortunato.com/blog/obsidian-pkm-llm-wiki)
+- [Gemma 4 E4B vs 26B on an RTX 4070 Ti: Benchmarks, RAG, and a Real Webapp Test](https://alfonsofortunato.com/blog/gemma-4-e4b-vs-26b-local-benchmarks)
+- [How I Passed KCNA and KCSA — And What to Actually Study](https://alfonsofortunato.com/blog/kcna-kcsa-study-guide-a-practical-path-toward-kubeastronaut)
+- [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/blog/ghostty)
+- [Dagger and GitHub Actions: Simplifying CI/CD Pipelines](https://alfonsofortunato.com/blog/dagger)
 <!-- BLOG-POST-LIST:END -->
 
-> Want these to auto-update? Set up [gautamkrishnar/blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow) with your RSS feed.
+---
+
+## ⚡ Recent GitHub Activity
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
 ---
 
