@@ -125,11 +125,11 @@ I'm deeply into the AI space — both the frontier and the local side:
 ## 📝 Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
+- [DeepSeek V4 Flash on a Single DGX Spark](https://alfonsofortunato.com/blog/deepseek-v4-flash-on-a-single-dgx-spark)
 - [Running Laguna S 2.1 on a DGX Spark](https://alfonsofortunato.com/blog/running-laguna-s2-1-on-dgx-spark)
 - [My Obsidian PKM Setup: Karpathy's LLM Wiki + Claude Code + Local Search](https://alfonsofortunato.com/blog/obsidian-pkm-llm-wiki)
 - [Gemma 4 E4B vs 26B on an RTX 4070 Ti: Benchmarks, RAG, and a Real Webapp Test](https://alfonsofortunato.com/blog/gemma-4-e4b-vs-26b-local-benchmarks)
 - [How I Passed KCNA and KCSA — And What to Actually Study](https://alfonsofortunato.com/blog/kcna-kcsa-study-guide-a-practical-path-toward-kubeastronaut)
-- [Ghostty Terminal: Could This Be the Best Terminal Ever?](https://alfonsofortunato.com/blog/ghostty)
 <!-- BLOG-POST-LIST:END -->
 
 ---
