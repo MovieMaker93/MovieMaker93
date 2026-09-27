@@ -1,6 +1,5 @@
 <div align="center">
-  <h1>👋 Hi, I'm Alfonso Fortunato</h1>
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=DevSecOps+Engineer;Cloud+Native+Enthusiast;Kubernetes+%7C+CI%2FCD+%7C+Infrastructure;Open+Source+%7C+Homelab+%7C+Neovim+nerd" alt="Typing SVG" /></a>
+  <img src="./assets/header.svg" width="100%" alt="Alfonso Fortunato — DevSecOps Engineer" />
 </div>
 
 <div align="center">
@@ -9,6 +8,7 @@
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/devopsfortunato)
 [![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=hugo&logoColor=white)](https://alfonsofortunato.com)
 [![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:fortunato.alfonso@proton.me)
+<img src="https://komarev.com/ghpvc/?username=MovieMaker93&style=for-the-badge&color=7aa2f7&label=PROFILE+VIEWS" alt="Profile views" />
 
 </div>
 
@@ -16,54 +16,44 @@
 
 ## 🧑‍💻 About Me
 
+<img src="./assets/terminal.svg" width="100%" alt="kubectl get engineer alfonso -o yaml" />
+
 > *"Driven by curiosity, always seeking innovative solutions."*
 
-I'm a **DevSecOps Engineer** based in **Lugano, Switzerland** — I transitioned from full-stack development to cloud-native infrastructure and never looked back.
+I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full-stack development to cloud-native infrastructure and never looked back.
 
 - 🔭 Running a **Homelab Kubernetes cluster** where mistakes are welcome (it's called learning)
 - 🏅 **CKA · CKAD · KCNA · KCSA** · Sysdig Kraken Hunter · Snyk Certified Technical Professional
-- 🤖 AI enthusiast — benchmarking **frontier models** (Claude, GPT, Gemma) and running **local LLMs** (llama.cpp, Ollama) on my own hardware
+- 🤖 Benchmarking **frontier models** and running **local LLMs** (llama.cpp, Ollama, DGX Spark) on my own hardware
 - 🎤 Speaker at **Linux Day Avellino 2024**
-- 📝 I write about DevOps, cloud-native, and productivity at [alfonsofortunato.com](https://alfonsofortunato.com)
-- 📍 Lugano, Switzerland
+- 📝 I write about DevOps, cloud-native, and AI at [alfonsofortunato.com](https://alfonsofortunato.com)
+
+---
+
+## 🚢 How I Ship
+
+<img src="./assets/pipeline.svg" width="100%" alt="git push → build → test → trivy scan → cosign sign → argocd sync → running" />
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Languages**
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,rust,python,java,lua,bash&perline=12" alt="Languages" /><br/>
+  <img src="https://skillicons.dev/icons?i=kubernetes,docker,terraform,ansible,aws,azure,gcp,linux&perline=12" alt="Cloud & Infrastructure" /><br/>
+  <img src="https://skillicons.dev/icons?i=githubactions,gitlab,jenkins,grafana,prometheus,neovim,obsidian&perline=12" alt="CI/CD & tools" />
+</p>
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-
-**Cloud & Infrastructure**
-
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-
-**CI/CD & DevSecOps**
-
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![GitLab CI](https://img.shields.io/badge/GitLab_CI-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-![Dagger](https://img.shields.io/badge/Dagger-1d1d1d?style=flat-square&logo=dagger&logoColor=white)
-![Vault](https://img.shields.io/badge/HashiCorp_Vault-FFEC6E?style=flat-square&logo=vault&logoColor=black)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-
-**Tools I Live In**
-
-![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)
-![Obsidian](https://img.shields.io/badge/Obsidian-7C3AED?style=flat-square&logo=obsidian&logoColor=white)
-![tmux](https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/HashiCorp_Vault-FFEC6E?style=flat-square&logo=vault&logoColor=black" />
+  <img src="https://img.shields.io/badge/Dagger-1d1d1d?style=flat-square&logo=dagger&logoColor=white" />
+  <img src="https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat-square&logo=argo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aqua&logoColor=white" />
+  <img src="https://img.shields.io/badge/tmux-1BB91F?style=flat-square&logo=tmux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
+  <img src="https://img.shields.io/badge/Claude-CC785C?style=flat-square&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
+</p>
 
 ---
 
@@ -78,47 +68,12 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland** — I transitioned
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MovieMaker93&layout=compact&langs_count=8&theme=tokyonight"/>
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=MovieMaker93&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
-### 📈 Contribution Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MovieMaker93&theme=tokyo-night&hide_border=true&area=true" />
-</div>
-
-### 🐍 Contribution Snake
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake.svg" />
-    <img alt="Snake animation" src="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake.svg" />
-  </picture>
-</div>
-
----
-
 ## 🤖 AI & LLM Interests
 
-I'm deeply into the AI space — both the frontier and the local side:
-
-- **Frontier models** — Claude, GPT, Gemma, Mistral — I evaluate them for real workflows, not just benchmarks
-- **Local inference** — running models on my RTX 4070 Ti with llama.cpp and Ollama; tested Gemma 4 E4B vs 26B for RAG and webapp tasks
-- **PKM + AI** — building a personal knowledge base powered by LLMs (Obsidian + local search + Claude Code)
-- **DevSecOps meets AI** — exploring how LLMs fit into CI/CD pipelines and developer workflows
-
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-CC785C?style=flat-square&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+- **Frontier models:** Claude, GPT, Gemma, Mistral. I test them on real workflows, not just benchmarks
+- **Local inference:** RTX 4070 Ti and a DGX Spark running llama.cpp and Ollama (DeepSeek V4 Flash, GLM, Gemma 4, Laguna)
+- **PKM + AI:** a personal knowledge base powered by LLMs (Obsidian + local search + Claude Code)
+- **DevSecOps meets AI:** exploring how LLMs fit into CI/CD pipelines and developer workflows
 
 ---
 
@@ -134,6 +89,31 @@ I'm deeply into the AI space — both the frontier and the local side:
 
 ---
 
+## 📊 GitHub Stats
+
+<div align="center">
+  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=MovieMaker93&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=1a1b27" />
+  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MovieMaker93&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=1a1b27" />
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com/?user=MovieMaker93&theme=tokyonight&hide_border=true&background=1a1b27" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MovieMaker93&theme=tokyo-night&hide_border=true&area=true&bg_color=1a1b27" />
+</div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake.svg" />
+    <img alt="Snake animation" src="https://raw.githubusercontent.com/MovieMaker93/MovieMaker93/output/github-snake.svg" />
+  </picture>
+</div>
+
+---
+
 ## ⚡ Recent GitHub Activity
 
 <!--START_SECTION:activity-->
@@ -143,5 +123,5 @@ I'm deeply into the AI space — both the frontier and the local side:
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=100&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7aa2f7,50:bb9af7,100:7dcfff&height=120&section=footer&text=kubectl%20apply%20-f%20curiosity.yaml&fontSize=18&fontColor=1a1b27&fontAlignY=72&animation=twinkling" width="100%" />
 </div>
