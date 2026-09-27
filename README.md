@@ -137,7 +137,7 @@ I'm deeply into the AI space — both the frontier and the local side:
 ## ⚡ Recent GitHub Activity
 
 <!--START_SECTION:activity-->
-1. ❗ Opened issue [#7](https://github.com/MiaAI-Lab/DeepSeek-v4-Flash-One-DGX-Spark/issues/7) in [MiaAI-Lab/DeepSeek-v4-Flash-One-DGX-Spark](https://github.com/MiaAI-Lab/DeepSeek-v4-Flash-One-DGX-Spark)
+1. 💪 Opened PR [#40](https://github.com/ashhart/TensorFold/pull/40) in [ashhart/TensorFold](https://github.com/ashhart/TensorFold)
 <!--END_SECTION:activity-->
 
 ---
