@@ -117,7 +117,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## ⚡ Recent GitHub Activity
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#40](https://github.com/ashhart/TensorFold/pull/40) in [ashhart/TensorFold](https://github.com/ashhart/TensorFold)
+1. 🗣 Commented on [#40](https://github.com/ashhart/TensorFold/pull/40#issuecomment-5869173037) in [ashhart/TensorFold](https://github.com/ashhart/TensorFold)
 <!--END_SECTION:activity-->
 
 ---
