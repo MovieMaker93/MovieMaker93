@@ -117,7 +117,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## ⚡ Recent GitHub Activity
 
 <!--START_SECTION:activity-->
-1. ❗ Opened issue [#86](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark/issues/86) in [MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark)
+1. 🗣 Commented on [#86](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark/issues/86#issuecomment-5915585485) in [MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark)
 <!--END_SECTION:activity-->
 
 ---
