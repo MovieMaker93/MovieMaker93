@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const SITEMAP_URL = "https://alfonsofortunato.com/sitemap.xml";
+const RSS_URL = "https://alfonsofortunato.com/rss.xml";
 const README_PATH = new URL("../README.md", import.meta.url);
 const START_MARKER = "<!-- BLOG-POST-LIST:START -->";
 const END_MARKER = "<!-- BLOG-POST-LIST:END -->";
@@ -29,34 +29,20 @@ export function decodeHtmlEntities(value) {
   );
 }
 
-export function latestBlogUrls(sitemap, limit = MAX_POSTS) {
-  return [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)]
+export function latestBlogUrls(rss, limit = MAX_POSTS) {
+  return [...rss.matchAll(/<item>([\s\S]*?)<\/item>/g)]
     .map(([, entry]) => ({
-      url: entry.match(/<loc>(.*?)<\/loc>/)?.[1],
-      lastModified: entry.match(/<lastmod>(.*?)<\/lastmod>/)?.[1] ?? "",
+      title: decodeHtmlEntities(entry.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "").trim(),
+      url: entry.match(/<link>(.*?)<\/link>/)?.[1],
+      published: Date.parse(entry.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] ?? ""),
     }))
-    .filter(({ url }) => {
-      if (!url) return false;
+    .filter(({ title, url, published }) => {
+      if (!title || !url || !Number.isFinite(published)) return false;
       const path = new URL(url).pathname.replace(/\/$/, "");
       return path.startsWith("/blog/") && path !== "/blog";
     })
-    .sort((a, b) => b.lastModified.localeCompare(a.lastModified))
+    .sort((a, b) => b.published - a.published)
     .slice(0, limit);
-}
-
-export function titleFromHtml(html) {
-  const rawTitle =
-    html.match(
-      /<meta\s+property=["']og:title["']\s+content=["']([^"']+)["'][^>]*>/i,
-    )?.[1] ?? html.match(/<title>(.*?)<\/title>/is)?.[1];
-
-  if (!rawTitle) {
-    throw new Error("Blog post page does not contain a title");
-  }
-
-  return decodeHtmlEntities(rawTitle)
-    .replace(/\s+\|\s+Alfonso Fortunato\s*$/, "")
-    .trim();
 }
 
 export function replaceBlogList(readme, posts) {
@@ -115,18 +101,10 @@ export async function fetchText(
 }
 
 async function main() {
-  const sitemap = await fetchText(SITEMAP_URL);
-  const entries = latestBlogUrls(sitemap);
-  if (entries.length === 0) {
-    throw new Error("No blog posts found in the sitemap");
-  }
-
-  const posts = [];
-  for (const { url } of entries) {
-    posts.push({
-      title: titleFromHtml(await fetchText(url)),
-      url: new URL(url).href,
-    });
+  const rss = await fetchText(RSS_URL);
+  const posts = latestBlogUrls(rss);
+  if (posts.length === 0) {
+    throw new Error("No blog posts found in the RSS feed");
   }
 
   const readme = await readFile(README_PATH, "utf8");
