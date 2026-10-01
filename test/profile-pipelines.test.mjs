@@ -10,7 +10,7 @@ const activityWorkflow = await readFile(
 const blogWorkflow = await readFile(
   new URL("../.github/workflows/blog-post-workflow.yml", import.meta.url),
   "utf8",
-);
+).then((content) => content.replaceAll("\r\n", "\n"));
 
 test("README links to the requested X account", () => {
   assert.match(readme, /\(https:\/\/x\.com\/devopsfortunato\)/);
@@ -26,7 +26,7 @@ test("activity updater has exactly one ordered marker pair", () => {
   assert.match(activityWorkflow, /github-activity-readme/);
 });
 
-test("blog updater uses the sitemap-backed local script", () => {
+test("blog updater uses the local script", () => {
   assert.match(blogWorkflow, /node scripts\/update-blog-posts\.mjs/);
   assert.doesNotMatch(blogWorkflow, /alfonsofortunato\.com\/index\.xml/);
 });

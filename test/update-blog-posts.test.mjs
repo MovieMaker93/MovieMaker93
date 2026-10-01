@@ -5,32 +5,23 @@ import {
   fetchText,
   latestBlogUrls,
   replaceBlogList,
-  titleFromHtml,
 } from "../scripts/update-blog-posts.mjs";
 
-test("selects only the newest blog URLs from a sitemap", () => {
-  const sitemap = `
-    <urlset>
-      <url><loc>https://example.com/blog</loc></url>
-      <url><loc>https://example.com/blog/older</loc><lastmod>2025-01-01</lastmod></url>
-      <url><loc>https://example.com/about</loc><lastmod>2026-01-01</lastmod></url>
-      <url><loc>https://example.com/blog/newer</loc><lastmod>2026-01-01</lastmod></url>
-    </urlset>`;
+test("selects the newest articles and decodes their RSS titles", () => {
+  const rss = `
+    <rss><channel>
+      <item><title>Older article</title><link>https://example.com/blog/older/</link><pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate></item>
+      <item><title>About page</title><link>https://example.com/about/</link><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate></item>
+      <item><title>Newer &#39;article&#39;</title><link>https://example.com/blog/newer/</link><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate></item>
+    </channel></rss>`;
 
   assert.deepEqual(
-    latestBlogUrls(sitemap).map(({ url }) => url),
+    latestBlogUrls(rss, 2).map(({ title, url }) => ({ title, url })),
     [
-      "https://example.com/blog/newer",
-      "https://example.com/blog/older",
+      { title: "Newer 'article'", url: "https://example.com/blog/newer/" },
+      { title: "Older article", url: "https://example.com/blog/older/" },
     ],
   );
-});
-
-test("extracts and cleans the Open Graph title", () => {
-  const html =
-    '<meta property="og:title" content="Cloud &amp; Kubernetes | Alfonso Fortunato">';
-
-  assert.equal(titleFromHtml(html), "Cloud & Kubernetes");
 });
 
 test("replaces only the content inside the blog markers", () => {
