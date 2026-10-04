@@ -117,7 +117,7 @@ I'm a **DevSecOps Engineer** based in **Lugano, Switzerland**. I moved from full
 ## ⚡ Recent GitHub Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#1](https://github.com/MovieMaker93/SparklingKit/pull/1) in [MovieMaker93/SparklingKit](https://github.com/MovieMaker93/SparklingKit)
+1. 💪 Opened PR [#18](https://github.com/vcruz305/exllamav3/pull/18) in [vcruz305/exllamav3](https://github.com/vcruz305/exllamav3)
 <!--END_SECTION:activity-->
 
 ---
